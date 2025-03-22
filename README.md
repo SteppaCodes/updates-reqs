@@ -1,4 +1,3 @@
-```md
 # update-reqs 
 
 **A smart CLI tool to automatically update `requirements.txt` by fetching the latest versions of outdated libraries from PyPI.**  
@@ -73,5 +72,3 @@ This project is licensed under the MIT License.
 ---
 🔹 Made with ❤️ by ## The API Artist for Python developers! Happy coding!
 ```
-
-This version is **ready to copy-paste into GitHub** and supports **formatted headings, code blocks, lists, and links**. Let me know if you need any modifications! 🚀
