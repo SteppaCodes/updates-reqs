@@ -1,11 +1,3 @@
-Here's an updated version of your README with:  
-✅ **Commands section added** for better usability.  
-✅ **Feature checklist refined** to match progress.  
-✅ **More engaging call-to-action** for contributions.  
-
----
-
-```md
 # update-reqs 🚀  
 
 **A smart CLI tool to clean and update your `requirements.txt` by fetching the latest package versions from PyPI.**  
