@@ -1,0 +1,20 @@
+I'm new to CLI Tools so this is my study note, i'll try to make it as comprehensive as possible so anyone can pick it up and understand
+
+1. Understanding the CLI Structure
+A CLI tool in Python consists of three main parts:
+-
+Argument Parsing – Captures user input from the command line.
+Main Function Logic – Processes input and executes the intended task.
+Entry Point – Makes the tool executable like a normal command.
+
+- Argument Parsing: We use the 'argparse' module in python which helps us handle user input from the command line
+ -> import argparse
+ -> We then create an argument parser to handle command line argument... we also add a description
+   - parser = 'argparse.ArgumentParser(description="some random description")'
+ -> Define an argument: 'parser.add_argument("--name", type=str, required=True, help="Your name")'
+  - --name → This is the command-line argument.
+  - type=str → The argument must be a string.
+  - required=True → This ensures the user must provide --name.
+  - help="Your name" → Describes the argument in the --help output.
+ -> Parse user input
+  - args = parser.parse_args()
