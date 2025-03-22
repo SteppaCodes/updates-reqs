@@ -2,6 +2,7 @@ import argparse
 import re
 import os
 import sys
+from pathlib import Path
 
 def clean_requirements(file_path):
     """
@@ -25,8 +26,7 @@ def main():
     parser.add_argument("--file", required=True, help="path to requirements file")
     args = parser.parse_args()
 
-    file_path = args.file
-
+    file_path = Path(args.file).resolve()
     if not os.path.exists(file_path):
         print(f" Error: {file_path} does not exist.")
         sys.exit(1)  

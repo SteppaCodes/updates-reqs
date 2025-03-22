@@ -1,6 +1,0 @@
-django
-rest
-drf
-reuu
-re
-re
