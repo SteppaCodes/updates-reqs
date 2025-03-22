@@ -65,5 +65,4 @@ Want to help improve `update-reqs`? Follow these steps:
 ## 📜 License  
 This project is licensed under the MIT License.  
 
-🔹 Made with ❤️ for Python developers! Happy coding!  
-```
+🔹 Happy Coding!
