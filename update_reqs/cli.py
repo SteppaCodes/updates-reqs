@@ -35,7 +35,8 @@ def main():
 
     # Clean command
     clean_parser = sub_parsers.add_parser("clean", parents=[parent_parser], help="Remove version numner from requirements.txt")
-    
+    clean_parser.set_defaults(func=clean)
+
     args = parser.parse_args()
 
     file_path = Path(args.file).resolve()
@@ -43,8 +44,7 @@ def main():
         print(f" Error: {file_path} does not exist.")
         sys.exit(1)
 
-    if args.command == "clean":  
-        clean(args.file)
+    args.func(file_path)
 
 
 if __name__ == "__main__":
