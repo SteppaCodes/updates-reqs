@@ -3,8 +3,9 @@ import re
 import os
 import sys
 from pathlib import Path
+import requests
 
-def clean_requirements(file_path):
+def clean(file_path):
     """
         Function to remove all version number from requirements and write file back
     """
@@ -18,19 +19,32 @@ def clean_requirements(file_path):
     with open(file_path, "w") as file:
         file.write("\n".join(cleaned_lines) + "\n")
 
-    print("File Cleaned Successfully")
-
+    print("Requirements Cleaned Successfully")
+    
 
 def main():
-    parser = argparse.ArgumentParser(description="A smart CLI tool that automatically updates your requirements.txt by fetching the latest versions of outdated libraries from PyPI.")
-    parser.add_argument("--file", required=True, help="path to requirements file")
+    parser = argparse.ArgumentParser(
+        description="A smart CLI tool that automatically updates your requirements.txt by fetching the latest versions of outdated libraries from PyPI."
+    )
+
+    # Parent parser for global commands
+    parent_parser = argparse.ArgumentParser(add_help=False)
+    parent_parser.add_argument("--file", required=True, help="Path to requirements file")
+
+    sub_parsers = parser.add_subparsers(dest="command", required=True)
+
+    # Clean command
+    clean_parser = sub_parsers.add_parser("clean", parents=[parent_parser], help="Remove version numner from requirements.txt")
+    
     args = parser.parse_args()
 
     file_path = Path(args.file).resolve()
     if not os.path.exists(file_path):
         print(f" Error: {file_path} does not exist.")
-        sys.exit(1)  
-    clean_requirements(args.file)
+        sys.exit(1)
+
+    if args.command == "clean":  
+        clean(args.file)
 
 
 if __name__ == "__main__":

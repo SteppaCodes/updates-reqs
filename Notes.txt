@@ -18,3 +18,5 @@ Entry Point – Makes the tool executable like a normal command.
   - help="Your name" → Describes the argument in the --help output.
  -> Parse user input
   - args = parser.parse_args()
+
+Subparsers are used to add subcommands e.g update-reqs clean --file "requirements.txt"
