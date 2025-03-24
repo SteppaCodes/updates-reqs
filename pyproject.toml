@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "update-reqs"
+version = "1.0.0"
+description = "A smart CLI tool to clean and update requirements.txt by fetching the latest versions from PyPI."
+readme = "README.md"
+authors = [
+    { name = "The API Artist", email = "steppacodes@gmail.com" }
+]
+license = { text = "MIT" }
+dependencies = [
+    "requests"
+]
+requires-python = ">=3.6"
+
+[project.scripts]
+update-reqs = "update_reqs.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/SteppaCodes/updates-reqs"
+Issues = "https://github.com/SteppaCodes/updates-reqs/issues"

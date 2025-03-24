@@ -1,9 +1,5 @@
-import argparse
-import re
-import os
-import sys
+import re, os, sys, argparse
 from pathlib import Path
-import requests
 
 def clean(file_path):
     """

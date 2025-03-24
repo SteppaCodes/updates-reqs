@@ -1,0 +1,14 @@
+build
+certifi
+charset-normalizer
+colorama
+idna
+packaging
+Pygments
+pyproject_hooks
+pywin32-ctypes
+requests
+rfc3986
+setuptools
+update-reqs
+urllib3
