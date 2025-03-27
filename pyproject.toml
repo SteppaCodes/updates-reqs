@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "update-reqs"
-version = "1.1.0"
+version = "1.2.1"
 description = "A smart CLI tool to clean and update requirements.txt by fetching the latest versions from PyPI."
 readme = "README.md"
 authors = [
