@@ -31,6 +31,7 @@ pip install update-reqs
 | Feature | Status |
 |---------|--------|
 | Remove version numbers | ✅ Done |
+| Check outdated packages | ✅ Done |
 | Fetch latest versions | 🚧 In Progress |
 | Preserve comments and formatting | 🔜 Coming Soon |
 | Parallelized requests for speed | 🔜 Coming Soon |
